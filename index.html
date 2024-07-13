@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sudoku Solver</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Sudoku Solver</h1>
+    </div>
+    <div class="container">
+		
+      <div class="up-side">
+        <table class="grid">
+            <tbody>
+              <tr >
+                <td class="A1" >
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="A2 " title="A2">
+                  <input type="text" autocomplete="off" size="1" maxlength="1"  class="sudoku-input">
+                </td>
+                <td class="A3" title="A3">
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="A4 " title="A4">
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="A5 " title="A5">
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input"> 
+                </td>
+                <td class="A6" title="A6">
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="A7 " title="A7">
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="A8" title="A8">
+                  <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="A9 " title="A9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr>
+                <td class="B1 " title="B1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B2" title="B2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B3 " title="B3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B4" title="B4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B5 " title="B5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B6 " title="B6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B7" title="B7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B8 " title="B8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="B9" title="B9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr id="row-3">
+                <td class="C1" title="C1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C2" title="C2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C3 " title="C3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C4" title="C4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C5" title="C5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C6 " title="C6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C7" title="C7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C8" title="C8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="C9 " title="C9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr>
+                <td class="D1 " title="D1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D2" title="D2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D3 " title="D3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D4 " title="D4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D5" title="D5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D6" title="D6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D7" title="D7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D8 " title="D8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="D9"  title="D9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr>
+                <td class="E1 " title="E1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1"class="sudoku-input">
+                </td>
+                <td class="E2" title="E2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1"class="sudoku-input">
+                </td>
+                <td class="E3" title="E3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="E4 " title="E4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="E5" title="E5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="E6 " title="E6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="E7 " title="E7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="E8 " title="E8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="E9 " title="E9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr id="row-3">
+                <td class="F1 " title="F1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F2 " title="F2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F3 " title="F3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F4" title="F4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F5" title="F5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F6" title="F6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F7 " title="F7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F8 " title="F8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="F9 " title="F9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr>
+                <td class="G1" title="G1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G2 " title="G2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G3 " title="G3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G4 " title="G4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G5" title="G5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G6" title="G6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G7" title="G7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G8" title="G8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="G9" title="G9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr>
+                <td class="H1" title="H1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H2" title="H2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H3 " title="H3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H4 " title="H4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H5" title="H5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H6" title="H6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H7 " title="H7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H8" title="H8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="H9" title="H9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+              <tr>
+                <td class="I1 " title="I1">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I2" title="I2">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I3 " title="I3">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I4 " title="I4">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I5 " title="I5">
+                    <input type="text" autocomplete="off" size="1" maxlength="1"class="sudoku-input">
+                </td>
+                <td class="I6 " title="I6">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I7 " title="I7">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I8" title="I8">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+                <td class="I9" title="I9">
+                    <input type="text" autocomplete="off" size="1" maxlength="1" class="sudoku-input">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="down-side">
+       
+        <div class="inputbutton">
+            <div>
+                <input type="button" value="Solve" id="solve-button"/>
+            </div>
+            <div>
+                <input type="button" value="Clear" id="clear-button">
+            </div>
+            <div>
+              <input type="button" value="New Board" id="loadNewBoard-button">
+          </div>
+            
+        </div>
+        
+        <div id="error-msg"></div>
+      </div>
+    </div>
+</body>
+<script type="module" src="js/script.js"></script>
+</html>
